@@ -1,14 +1,3 @@
-// scroller.js -----------------------------------------------------------------
-// actions.js ------------------------------------------------------------------
-// command_palette.js ----------------------------------------------------------
-// string_matcher.js -----------------------------------------------------------
-// commands.js -----------------------------------------------------------------
-// components/CustomMenu.js ----------------------------------------------------
-// components/KeyboardShortcut.js ----------------------------------------------
-// components/MenuItem.js ------------------------------------------------------
-// components/SuggestionItem.js ------------------------------------------------
-// config.json -----------------------------------------------------------------
-// keymap.js -------------------------------------------------------------------
 // index.html ------------------------------------------------------------------
 const COMMAND_PALETTE_TEMPLATE = document.createElement('template')
 
@@ -1581,6 +1570,8 @@ function toggleDarkMode() {
   document.querySelector('button:has(svg.lucide)').click()
 }
 
+// scroller.js -----------------------------------------------------------------
+
 class Scroller {
   static SHORT_THROW_FRAME_CALIBRATION = [0.2, 0.2, 0.2, 0.2, 0.2]
   static LONG_THROW_FRAME_CALIBRATION = [0.001, 0.002, 0.003, 0.004, 0.99]
@@ -1639,6 +1630,8 @@ class Scroller {
   }
 }
 
+// keymap.js -------------------------------------------------------------------
+
 class Keymap extends Map {
   get(keyboardEvent) {
     return super.get(
@@ -1679,6 +1672,8 @@ const keySequence = ({
   metaKey,
   code
 ])
+
+// components/CustomMenu.js ----------------------------------------------------
 
 const CUSTOM_MENU_TEMPLATE = document.createElement('template')
 
@@ -1740,6 +1735,8 @@ class CustomMenu extends HTMLElement {
 
 customElements.define('custom-menu', CustomMenu)
 
+// components/MenuItem.js ------------------------------------------------------
+
 const MENU_ITEM_TEMPLATE = document.createElement('template')
 
 MENU_ITEM_TEMPLATE.innerHTML = `
@@ -1799,6 +1796,8 @@ const keyDisplay = {
   shiftKey: '⇧',
   metaKey: '⌘'
 }
+
+// components/KeyboardShortcut.js ----------------------------------------------
 
 const KEYBOARD_SHORTCUT_TEMPLATE = document.createElement('template')
 
@@ -1864,6 +1863,8 @@ class KeyboardShortcut extends HTMLElement {
 
 customElements.define('keyboard-shortcut', KeyboardShortcut)
 
+// components/SuggestionItem.js ------------------------------------------------
+
 const SUGGESTION_ITEM_TEMPLATE = document.createElement('template')
 
 SUGGESTION_ITEM_TEMPLATE.innerHTML = `
@@ -1917,6 +1918,8 @@ class SuggestionItem extends HTMLElement {
 }
 
 customElements.define('suggestion-item', SuggestionItem)
+
+// string_matcher.js -----------------------------------------------------------
 
 const segmenter = new Intl.Segmenter([], {
   granularity: 'word'
