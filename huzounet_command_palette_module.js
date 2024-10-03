@@ -21,8 +21,8 @@ document.body.append(
   COMMAND_PALETTE_TEMPLATE.content.firstElementChild
 )
 
-const COMMAND_PALETTE_STYLE_SHEET = new CSSStyleSheet
-COMMAND_PALETTE_STYLE_SHEET.replaceSync(`
+const COMMAND_PALETTE_STYLE_SHEET = document.createElement('style')
+COMMAND_PALETTE_STYLE_SHEET.textContent = `
   :root {
     color-scheme: light dark;
     --font-family: system-ui;
@@ -367,8 +367,10 @@ COMMAND_PALETTE_STYLE_SHEET.replaceSync(`
     background: var(--background-color);
     opacity: 0.6;
   }
-`)
-document.adoptedStyleSheets.push(COMMAND_PALETTE_STYLE_SHEET)
+`
+document.head.append(
+  COMMAND_PALETTE_STYLE_SHEET
+)
 
 const HUZOUNET_SUGGESTIONS = [
   { "type": "huzounet", "title": "YouTube", "url": "https://youtube.com/@Huzounet" },
