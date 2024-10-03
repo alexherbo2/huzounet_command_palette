@@ -1,8 +1,21 @@
+body {
+  color-scheme: light dark;
+  background-color: light-dark(white, black);
+  color: light-dark(black, white);
+  margin: 0;
+  padding: 0;
+}
+
 video {
   object-fit: cover;
   width: 100vw;
   height: 100vh;
   position: sticky;
   top: 0;
+  left: 0;
   opacity: 0.3;
+}
+
+svg.lucide {
+  display: none;
 }
