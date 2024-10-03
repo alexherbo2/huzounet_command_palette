@@ -1,3 +1,15 @@
+// scroller.js -----------------------------------------------------------------
+// actions.js ------------------------------------------------------------------
+// command_palette.js ----------------------------------------------------------
+// string_matcher.js -----------------------------------------------------------
+// commands.js -----------------------------------------------------------------
+// components/CustomMenu.js ----------------------------------------------------
+// components/KeyboardShortcut.js ----------------------------------------------
+// components/MenuItem.js ------------------------------------------------------
+// components/SuggestionItem.js ------------------------------------------------
+// config.json -----------------------------------------------------------------
+// keymap.js -------------------------------------------------------------------
+// index.html ------------------------------------------------------------------
 const COMMAND_PALETTE_TEMPLATE = document.createElement('template')
 
 COMMAND_PALETTE_TEMPLATE.innerHTML = `
@@ -2090,12 +2102,11 @@ function updateMatches(query, candidates, elements) {
     paletteMenuElement.clearMenuItems()
   } else {
     const string_matcher = new StringMatcher(query)
-    const filteredCandidates = Iterator.from(candidates)
+    const filteredCandidates = candidates
       .filter((candidate) =>
         string_matcher.matches(candidate.string)
       )
-      .take(MAX_CANDIDATE_RESULTS)
-      .toArray()
+      .slice(0, MAX_CANDIDATE_RESULTS)
     if (filteredCandidates.length > 0) {
       const menuItemElements = filteredCandidates.map((candidate) => {
         const commandElement = elements[candidate.id]
