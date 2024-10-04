@@ -1810,14 +1810,14 @@ class MenuItem extends HTMLElement {
 
 customElements.define('menu-item', MenuItem)
 
+// components/KeyboardShortcut.js ----------------------------------------------
+
 const keyDisplay = {
   ctrlKey: '⌃',
   altKey: '⌥',
   shiftKey: '⇧',
   metaKey: '⌘'
 }
-
-// components/KeyboardShortcut.js ----------------------------------------------
 
 const KEYBOARD_SHORTCUT_TEMPLATE = document.createElement('template')
 
