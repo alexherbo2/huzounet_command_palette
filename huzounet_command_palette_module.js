@@ -2116,7 +2116,9 @@ for (const menuItemElement of menuItemElements) {
 }
 
 for (const { key, command } of GLOBAL_BINDINGS) {
-  const menuItemElement = menuElement.querySelector(`[data-command="${command}"]`)
+  const menuItemElement = menuElement.querySelector(`
+    menu-item[data-command="${command}"]
+  `)
   if (menuItemElement) {
     menuItemElement.addKeyboardShortcut(key)
   }
