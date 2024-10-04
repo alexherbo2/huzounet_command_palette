@@ -406,6 +406,8 @@ const HUZOUNET_SUGGESTIONS = [
   { "type": "huzounet", "title": "Instagram", "url": "https://instagram.com/huzounet" },
   { "type": "huzounet", "title": "TikTok", "url": "https://tiktok.com/@huzounet" },
   { "type": "huzounet", "title": "Twitter", "url": "https://twitter.com/huzounet" },
+  { "type": "huzounet", "title": "Ankadex", "url": "https://huzounet.fr/tools/ankadex" },
+  { "type": "huzounet", "title": "Comment faire des kamas", "url": "https://huzounet.fr/guides/comment-faire-des-kamas" },
 ]
 
 const DOFUSBOOK_SUGGESTIONS = [
