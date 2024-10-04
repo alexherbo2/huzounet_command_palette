@@ -16,6 +16,7 @@ video {
   opacity: 0.3;
 }
 
-svg.lucide {
+svg.lucide-sun,
+svg.lucide-moon {
   display: none;
 }
