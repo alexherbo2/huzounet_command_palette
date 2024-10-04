@@ -16,6 +16,11 @@ video {
   opacity: 0.3;
 }
 
+nav div ul {
+  margin: 0;
+  padding: 0;
+}
+
 svg.lucide-sun,
 svg.lucide-moon {
   display: none;
