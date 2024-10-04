@@ -5,7 +5,7 @@ const COMMAND_PALETTE_TEMPLATE = document.createElement('template')
 COMMAND_PALETTE_TEMPLATE.innerHTML = `
   <dialog id="command_palette" popover>
     <header>
-      <input id="palette-input" placeholder="Rechercher">
+      <input id="palette-input" placeholder="Rechercher" autocomplete="off">
     </header>
     <main>
       <custom-menu id="palette-menu" hidden>
