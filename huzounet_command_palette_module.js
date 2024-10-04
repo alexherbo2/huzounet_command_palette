@@ -2219,4 +2219,5 @@ mainElement.addEventListener('scroll', debounceAnimationFrame(() => {
 mainElement.dataset.scrollTop = 0
 
 inputHandler.start()
+
 paletteInputHandler.start()
