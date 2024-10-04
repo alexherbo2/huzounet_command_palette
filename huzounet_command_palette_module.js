@@ -307,7 +307,7 @@ COMMAND_PALETTE_STYLE_SHEET.textContent = `
     content: ",";
   }
 
-  #command_palette #menu-commands menu-item:has(suggestion-item[data-type="dofusbook"]) {
+  #command_palette #menu-commands menu-item:has(suggestion-item) {
     display: none;
   }
 
@@ -2191,7 +2191,6 @@ function onSuggestionSync(suggestions, suggestionLabels) {
     const menuItemElement = document.createElement('menu-item')
     const suggestionElement = document.createElement('suggestion-item')
     suggestionElement.dataset.label = suggestionLabels.get(suggestion.type)
-    suggestionElement.dataset.type = suggestion.type
     suggestionElement.dataset.title = suggestion.title
     suggestionElement.dataset.domain = suggestion.url
     menuItemElement.addEventListener('click', () => {
