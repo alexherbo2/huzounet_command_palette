@@ -1,4 +1,5 @@
-// index.html ------------------------------------------------------------------
+// html ------------------------------------------------------------------------
+
 const COMMAND_PALETTE_TEMPLATE = document.createElement('template')
 
 COMMAND_PALETTE_TEMPLATE.innerHTML = `
@@ -22,7 +23,10 @@ document.body.append(
   COMMAND_PALETTE_TEMPLATE.content.firstElementChild
 )
 
+// css -------------------------------------------------------------------------
+
 const COMMAND_PALETTE_STYLE_SHEET = document.createElement('style')
+
 COMMAND_PALETTE_STYLE_SHEET.textContent = `
   :root {
     color-scheme: light dark;
@@ -369,9 +373,12 @@ COMMAND_PALETTE_STYLE_SHEET.textContent = `
     opacity: 0.6;
   }
 `
+
 document.head.append(
   COMMAND_PALETTE_STYLE_SHEET
 )
+
+// database --------------------------------------------------------------------
 
 const HUZOUNET_SUGGESTIONS = [
   { "type": "huzounet", "title": "YouTube", "url": "https://youtube.com/@Huzounet" },
@@ -1450,16 +1457,6 @@ const DOFUSBOOK_SUGGESTIONS = [
   { "type": "dofusbook", "title": "ZOBAL TERRE/CAC 120", "url": "https://d-bk.net/fr/d/o20r" },
 ]
 
-const SuggestionType = {
-  Huzounet: 'huzounet',
-  Dofusbook: 'dofusbook',
-}
-
-const suggestionLabels = new Map([
-  [SuggestionType.Huzounet, 'HUZOUNET'],
-  [SuggestionType.Dofusbook, 'DOFUSBOOK'],
-])
-
 const GLOBAL_BINDINGS = [
   { "command": "openCommandPalette", "key": { "ctrlKey": true, "code": "KeyU" } },
   { "command": "openCommandPalette", "key": { "ctrlKey": true, "code": "KeyK" } },
@@ -1959,8 +1956,7 @@ function tokenize(string) {
     )
 }
 
-const INPUT_DEBOUNCE_DELAY = 50
-const MAX_CANDIDATE_RESULTS = 25
+// input_handler.js ------------------------------------------------------------
 
 class InputHandler {
   actions = new Map
@@ -2013,6 +2009,8 @@ function suppressEvent(event) {
   event.stopImmediatePropagation()
 }
 
+// utils.js --------------------------------------------------------------------
+
 function debounce(callback, delay) {
   let timeoutId
   return (...params) => {
@@ -2032,6 +2030,21 @@ function debounceAnimationFrame(callback) {
     })
   }
 }
+
+// main.js ---------------------------------------------------------------------
+
+const INPUT_DEBOUNCE_DELAY = 50
+const MAX_CANDIDATE_RESULTS = 25
+
+const SuggestionType = {
+  Huzounet: 'huzounet',
+  Dofusbook: 'dofusbook',
+}
+
+const suggestionLabels = new Map([
+  [SuggestionType.Huzounet, 'HUZOUNET'],
+  [SuggestionType.Dofusbook, 'DOFUSBOOK'],
+])
 
 const commandPaletteElement = document.getElementById('command_palette')
 const mainElement = commandPaletteElement.querySelector('main')
