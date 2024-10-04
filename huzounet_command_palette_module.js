@@ -1457,16 +1457,13 @@ const DOFUSBOOK_SUGGESTIONS = [
   { "type": "dofusbook", "title": "ZOBAL TERRE/CAC 120", "url": "https://d-bk.net/fr/d/o20r" },
 ]
 
+// config ----------------------------------------------------------------------
+
 const GLOBAL_BINDINGS = [
   { "command": "openCommandPalette", "key": { "ctrlKey": true, "code": "KeyU" } },
   { "command": "openCommandPalette", "key": { "ctrlKey": true, "code": "KeyK" } },
   { "command": "openCommandPalette", "key": { "metaKey": true, "code": "KeyK" } },
   { "command": "toggleDarkMode", "key": { "ctrlKey": true, "code": "KeyY" } },
-]
-
-const GLOBAL_ACTIONS = [
-  { "name": "openCommandPalette", "fun": openCommandPalette },
-  { "name": "toggleDarkMode", "fun": toggleDarkMode },
 ]
 
 const PALETTE_BINDINGS = [
@@ -1483,6 +1480,13 @@ const PALETTE_BINDINGS = [
   { "command": "movePageUp", "key": { "ctrlKey": true, "code": "KeyU" } },
   { "command": "closeCommandPalette", "key": { "code": "Escape" } },
   { "command": "closeCommandPalette", "key": { "ctrlKey": true, "code": "KeyC" } },
+]
+
+// actions ---------------------------------------------------------------------
+
+const GLOBAL_ACTIONS = [
+  { "name": "openCommandPalette", "fun": openCommandPalette },
+  { "name": "toggleDarkMode", "fun": toggleDarkMode },
 ]
 
 const PALETTE_ACTIONS = [
