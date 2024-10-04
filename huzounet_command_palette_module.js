@@ -1567,7 +1567,7 @@ function movePageUp(cx) {
 }
 
 function toggleDarkMode() {
-  document.querySelector('button:has(svg.lucide)').click()
+  document.querySelector('button:has(svg.lucide-sun, svg.lucide-moon)').click()
 }
 
 // scroller.js -----------------------------------------------------------------
