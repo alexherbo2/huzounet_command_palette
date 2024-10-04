@@ -23,6 +23,25 @@ document.body.append(
   COMMAND_PALETTE_TEMPLATE.content.firstElementChild
 )
 
+const COMMAND_PALETTE_BUTTON_TEMPLATE = document.createElement('template')
+
+COMMAND_PALETTE_BUTTON_TEMPLATE.innerHTML = `
+  <button
+    popovertarget="command_palette"
+    class="
+      m-auto
+      text-muted-foreground
+      hover:text-foreground
+    "
+  >
+    Palette
+  </button>
+`
+
+document.querySelector('nav div ul').append(
+  COMMAND_PALETTE_BUTTON_TEMPLATE.content.firstElementChild
+)
+
 // css -------------------------------------------------------------------------
 
 const COMMAND_PALETTE_STYLE_SHEET = document.createElement('style')
