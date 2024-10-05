@@ -2,7 +2,7 @@
 name = chrome-huzounet-command-palette
 version = $(shell git describe --tags --always)
 
-all: assets/huzounet-command-palette-logo@16px.png assets/huzounet-command-palette-logo@32px.png assets/huzounet-command-palette-logo@48px.png assets/huzounet-command-palette-logo@128px.png assets/keyboard_codes_alphanumeric.svg
+all: assets/huzounet-command-palette-logo@16px.png assets/huzounet-command-palette-logo@32px.png assets/huzounet-command-palette-logo@48px.png assets/huzounet-command-palette-logo@128px.png
 
 assets/huzounet-command-palette-logo.png:
 	curl -sSL -z $@ --create-dirs -o $@ https://huzounet.fr/_next/static/media/logo-huzounet.eeafcdfb.png
