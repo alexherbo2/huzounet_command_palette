@@ -1,3 +1,5 @@
+# Huzounet Command Palette
+
 Command palette for [Huzounet.fr].
 
 1. To open the command palette—Press `Ctrl+K` (`Cmd+K` on macOS) or click the “Palette” button at [Huzounet.fr].
@@ -6,4 +8,6 @@ Command palette for [Huzounet.fr].
 
 [Huzounet.fr]: https://huzounet.fr
 
-https://alexherbo2.github.io/huzounet_command_palette/huzounet_command_palette.html
+### Chrome Web Store
+
+[Add to Chrome](https://chromewebstore.google.com/detail/huzounet_command_palette/fhggnaccbklagddlkgigobkocnkjdanh)
