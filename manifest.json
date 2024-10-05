@@ -10,7 +10,8 @@
       "matches": ["https://huzounet.fr/*"],
       "js": [
         "huzounet_command_palette_module.js"
-      ]
+      ],
+      "world": "MAIN"
     }
   ],
   "icons": {
