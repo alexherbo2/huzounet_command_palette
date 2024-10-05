@@ -1750,7 +1750,7 @@ class CustomMenu extends HTMLElement {
       const menuItem = this.keymap.get(keyboardEvent)
       menuItem.focus()
       menuItem.click()
-      keyboardEvent.preventDefault()
+      suppressEvent(keyboardEvent)
     }
   }
 }
