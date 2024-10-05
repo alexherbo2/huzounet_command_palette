@@ -23,7 +23,7 @@ build: all
 	npm install
 
 release: clean build
-	7z a releases/$(name)-$(version).zip manifest.json src assets
+	7z a releases/$(name)-$(version).zip manifest.json huzounet_command_palette_module.js assets
 
 clean:
 	git clean -d -f -X
